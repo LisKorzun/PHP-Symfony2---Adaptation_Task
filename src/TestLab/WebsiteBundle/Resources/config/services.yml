@@ -1,4 +1,8 @@
+parameters:
+    testlab.website.controller.index.class:  TestLab\WebsiteBundle\Controller\IndexController
+
 services:
-    ws.index_controller:
-        class:     TestLab\WebsiteBundle\Controller\IndexController
+    testlab.website.controller.index:
+        class:     %testlab.website.controller.index.class%
         arguments: ["@templating"]
+

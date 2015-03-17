@@ -1,3 +1,7 @@
+parameters:
+    testlab.common.controller.abstract.class:  TestLab\CommonBundle\Controller\AbstractController
+
 services:
-    abstract_controller:
-        class: TestLab\CommonBundle\Controller\AbstractController
+    testlab.common.controller.abstract:
+        class: %testlab.common.controller.abstract.class%
+
