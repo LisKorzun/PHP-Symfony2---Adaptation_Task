@@ -1,0 +1,4 @@
+services:
+    ws.index_controller:
+        class:     TestLab\WebsiteBundle\Controller\IndexController
+        arguments: ["@templating"]

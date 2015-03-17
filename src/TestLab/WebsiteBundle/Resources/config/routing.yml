@@ -1,0 +1,3 @@
+test_lab_website_homepage:
+    path:     /
+    defaults: { _controller: ws.index_controller:indexAction }

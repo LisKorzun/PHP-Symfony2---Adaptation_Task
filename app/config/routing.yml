@@ -1,0 +1,4 @@
+test_lab_website:
+    resource: "@TestLabWebsiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
