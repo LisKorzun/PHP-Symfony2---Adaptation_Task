@@ -4,4 +4,3 @@ parameters:
 services:
     testlab.common.controller.abstract:
         class: %testlab.common.controller.abstract.class%
-
