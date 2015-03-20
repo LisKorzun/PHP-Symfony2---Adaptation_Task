@@ -15,5 +15,3 @@ php app/console generate:bundle --namespace=TestLab/CommonBundle --format=yml
 php app/console generate:bundle --namespace=TestLab/WebsiteBundle --format=yml
 
 Screenshots  of the Pages:
-
-
