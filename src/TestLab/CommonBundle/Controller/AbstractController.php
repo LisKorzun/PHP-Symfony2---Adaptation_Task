@@ -2,13 +2,17 @@
 
 namespace TestLab\CommonBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
+
 /**
  * @Route(service="testlab.common.controller.abstract")
  */
 abstract class AbstractController
 {
+    /**
+     * @var EngineInterface
+     */
     private  $templating;
 
     /**
