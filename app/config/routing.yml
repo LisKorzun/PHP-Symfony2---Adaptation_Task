@@ -1,3 +1,7 @@
+test_lab_contact:
+    resource: "@TestLabContactBundle/Resources/config/routing.yml"
+    prefix:   /
+
 test_lab_website:
     resource: "@TestLabWebsiteBundle/Resources/config/routing.yml"
     prefix:   /

@@ -1,0 +1,7 @@
+test_lab_contact_createpage:
+    resource: "@TestLabContactBundle/Controller/"
+    type:     annotation
+
+test_lab_contact_viewpage:
+    resource: "@TestLabContactBundle/Controller/"
+    type:     annotation
