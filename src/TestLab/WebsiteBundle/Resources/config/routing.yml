@@ -1,0 +1,3 @@
+test_lab_website_homepage:
+    resource: "@TestLabWebsiteBundle/Controller/"
+    type:     annotation
