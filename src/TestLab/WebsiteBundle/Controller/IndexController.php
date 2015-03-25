@@ -13,10 +13,10 @@ class IndexController extends AbstractController
 {
     /**
      * @Route("/", name="test_lab_website_homepage")
-     * @Template("TestLabWebsiteBundle:Index:index.html.twig")
+     * @Template
      */
     public function indexAction()
     {
-        return array();
+        return [];
     }
 }

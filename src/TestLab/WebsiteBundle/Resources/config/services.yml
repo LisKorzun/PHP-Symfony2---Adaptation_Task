@@ -5,7 +5,7 @@ services:
     testlab.common.controller.abstract:
         abstract:  true
         calls:
-                - [setTemplate, ["@templating"]]
+            - [setTemplate, ["@templating"]]
 
     testlab.website.controller.index:
         class:  %testlab.website.controller.index.class%
