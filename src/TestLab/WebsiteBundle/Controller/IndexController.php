@@ -11,12 +11,4 @@ use TestLab\CommonBundle\Controller\AbstractController;
  */
 class IndexController extends AbstractController
 {
-    /**
-     * @Route("/", name="test_lab_website_homepage")
-     * @Template
-     */
-    public function indexAction()
-    {
-        return [];
-    }
 }

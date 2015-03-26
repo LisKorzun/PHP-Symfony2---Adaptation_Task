@@ -1,3 +1,11 @@
-test_lab_website_homepage:
-    resource: "@TestLabWebsiteBundle/Controller/"
-    type:     annotation
+test_lab_website_createpage:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    'TestLabWebsiteBundle:Index:create.html.twig'
+
+test_lab_website_viewpage:
+    path: /view
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    'TestLabWebsiteBundle:Index:view.html.twig'
