@@ -13,7 +13,9 @@
     <div class="container">
         <div class="navbar-header">
             <a  href="http://www.it-academy.by/" target="_blank">
-                <img class="logo" alt="Brand" src="{{ asset('bundles/testlabwebsite/images/logo.png') }}">
+                {% image '@logo' %}
+                <img src="{{ asset_url }}" alt="Brand" class="logo" />
+                {% endimage %}
             </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
