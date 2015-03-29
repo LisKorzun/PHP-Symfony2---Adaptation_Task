@@ -13,6 +13,12 @@ https://github.com/LisKorzun/Symfony4-Test_Lab_PR/pull/2
 
 feature-03  -  "Creating two pages in WebsiteBundle"
 
+https://github.com/LisKorzun/Symfony4-Test_Lab_PR/pull/3
+
+feature-04  -  "Addition a form 'Contact Us', validation and display form data"
+
+https://github.com/LisKorzun/Symfony4-Test_Lab_PR/pull/4
+
 Used Console Commands:
 
 composer create-project symfony/framework-standard-edition test_lab_pr/
