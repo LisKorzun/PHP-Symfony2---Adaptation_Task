@@ -38,8 +38,10 @@ class IndexController extends AbstractController
      * @Route("/view", name="test_lab_website_viewpage")
      * @Template
      */
-    public function viewAction()
+    public function viewAction(Request $request)
     {
-        return [];
+        $session = $request->getSession();
+        $data = $session->all();
+        return ['data' => $data];
     }
 }
