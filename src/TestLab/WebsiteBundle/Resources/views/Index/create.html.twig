@@ -8,5 +8,16 @@
         <h1>Welcome</h1>
         <p>You can send us a message, as well as view all posts.</p>
     </div>
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <h1>Contact Us</h1>
+        {{ form_start(form) }}
+        {{ form_widget(form, { 'attr': {'class': 'form-group'} }) }}
+        <div>
+            <input type="submit" value="Send" class="btn btn-primary pull-left" />
+        </div>
+        {{ form_end(form) }}
+    </div>
+    <div class="col-md-3"></div>
 
 {% endblock %}

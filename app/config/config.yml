@@ -42,6 +42,10 @@ assetic:
                  - '@TestLabWebsiteBundle/Resources/public/css/bootstrap.css'
                  - '@TestLabWebsiteBundle/Resources/public/css/main.css'
             output: css/style.css
+        logo:
+            inputs:
+                 - '@TestLabWebsiteBundle/Resources/public/images/logo.png'
+            output: images/logo.png
     filters:
         cssrewrite: ~
         #closure:

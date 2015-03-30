@@ -1,12 +1,19 @@
 parameters:
     testlab.website.controller.index.class:  TestLab\WebsiteBundle\Controller\IndexController
+    testlab.website.form.contact.class:  TestLab\WebsiteBundle\Form\ContactType
 
 services:
     testlab.common.controller.abstract:
         abstract:  true
         calls:
             - [setTemplate, ["@templating"]]
+            - [setFormFactory, ["@form.factory"]]
 
     testlab.website.controller.index:
         class:  %testlab.website.controller.index.class%
         parent: testlab.common.controller.abstract
+
+    testlab.website.form.type.contact:
+        class: %testlab.website.form.contact.class%
+        tags:
+             - { name: form.type, alias: website_contact }
