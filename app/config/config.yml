@@ -45,6 +45,7 @@ assetic:
         logo:
             inputs:
                  - '@TestLabWebsiteBundle/Resources/public/images/logo.png'
+            output: images/logo.png
     filters:
         cssrewrite: ~
         #closure:

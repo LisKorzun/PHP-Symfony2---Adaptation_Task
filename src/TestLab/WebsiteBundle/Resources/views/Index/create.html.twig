@@ -12,32 +12,12 @@
     <div class="col-md-6">
         <h1>Contact Us</h1>
         {{ form_start(form) }}
-        {{ form_errors(form) }}
-
-        <div class="form-group">
-            {{ form_label(form.name) }}
-            {{ form_errors(form.name) }}
-            {{ form_widget(form.name) }}
-        </div>
-        <div class="form-group">
-            {{ form_label(form.email) }}
-            {{ form_errors(form.email) }}
-            {{ form_widget(form.email) }}
-        </div>
-        <div class="form-group">
-            {{ form_label(form.subject) }}
-            {{ form_errors(form.subject) }}
-            {{ form_widget(form.subject) }}
-        </div>
-        <div class="form-group">
-            {{ form_label(form.body) }}
-            {{ form_errors(form.body) }}
-            {{ form_widget(form.body) }}
-        </div>
+        {{ form_widget(form, { 'attr': {'class': 'form-group'} }) }}
         <div>
             <input type="submit" value="Send" class="btn btn-primary pull-left" />
         </div>
         {{ form_end(form) }}
     </div>
     <div class="col-md-3"></div>
+
 {% endblock %}
