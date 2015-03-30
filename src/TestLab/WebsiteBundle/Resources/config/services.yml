@@ -16,4 +16,11 @@ services:
     testlab.website.form.type.contact:
         class: %testlab.website.form.contact.class%
         tags:
-             - { name: form.type, alias: website_contact }
+            - { name: form.type, alias: website_contact }
+
+    testlab.website.repository.contact:
+        class: Doctrine\ORM\EntityRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method: getRepository
+        arguments:
+            - TestLab\WebsiteBundle\Entity\Contact
