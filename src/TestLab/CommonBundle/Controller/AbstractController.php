@@ -35,7 +35,7 @@ abstract class AbstractController
      * Get templating
      * @return EngineInterface
      */
-    public function getTemplate()
+    protected function getTemplate()
     {
         return $this->templating;
     }
@@ -53,7 +53,7 @@ abstract class AbstractController
      * Get formFactory
      * @return FormFactory
      */
-    public function getFormFactory()
+    protected function getFormFactory()
     {
         return $this->formFactory;
     }
