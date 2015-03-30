@@ -67,7 +67,7 @@ abstract class AbstractController
      *
      * @return Form
      */
-    public function createForm($type, $data = null, array $options = array())
+    protected function createForm($type, $data = null, array $options = array())
     {
         return $this->formFactory->create($type, $data, $options);
     }
@@ -80,7 +80,7 @@ abstract class AbstractController
      *
      * @return RedirectResponse
      */
-    public function redirect($url, $status = 302)
+    protected function redirect($url, $status = 302)
     {
         return new RedirectResponse($url, $status);
     }
