@@ -19,6 +19,10 @@ feature-04  -  "Addition a form 'Contact Us', validation and display form data"
 
 https://github.com/LisKorzun/Symfony4-Test_Lab_PR/pull/4
 
+feature-05  -  "Storing data in DB and display data from DB using Knp paginator"
+
+https://github.com/LisKorzun/Symfony4-Test_Lab_PR/pull/5
+
 Used Console Commands:
 
 composer create-project symfony/framework-standard-edition test_lab_pr/
