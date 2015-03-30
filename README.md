@@ -35,4 +35,17 @@ php app/console assets:install web --symlink
 
 php app/console assetic:dump --force
 
+composer update
+
+php app/console doctrine:database:create
+
+php app/console doctrine:migrations:status
+
+php app/console doctrine:migrations:generate
+
+php app/console doctrine:migrations:status --show-versions
+
+php app/console doctrine:migrations:diff
+
+
 Screenshots  of the Pages:
