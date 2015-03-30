@@ -29,4 +29,6 @@ php app/console generate:bundle --namespace=TestLab/WebsiteBundle --format=yml
 
 php app/console assets:install web --symlink
 
+php app/console assetic:dump --force
+
 Screenshots  of the Pages:
