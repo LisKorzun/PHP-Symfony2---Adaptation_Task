@@ -6,6 +6,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 use Symfony\Component\Form\FormFactory;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use TestLab\WebsiteBundle\Repository\ContactRepository;
 
 /**
  * @Route(service="testlab.common.controller.abstract")
@@ -22,6 +23,10 @@ abstract class AbstractController
      */
     private $formFactory;
 
+    /**
+     * @var ContactRepository
+     */
+    private $contactRepository;
     /**
      * Set templating
      * @param EngineInterface $templating
@@ -56,6 +61,24 @@ abstract class AbstractController
     protected function getFormFactory()
     {
         return $this->formFactory;
+    }
+
+    /**
+     * Get contactRepository
+     * @return ContactRepository
+     */
+    public function getContactRepository()
+    {
+        return $this->contactRepository;
+    }
+
+    /**
+     * Set contactRepository
+     * @param ContactRepository $contactRepository
+     */
+    public function setContactRepository(ContactRepository $contactRepository)
+    {
+        $this->contactRepository = $contactRepository;
     }
 
     /**

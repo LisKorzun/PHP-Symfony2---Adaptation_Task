@@ -8,6 +8,7 @@ services:
         calls:
             - [setTemplate, ["@templating"]]
             - [setFormFactory, ["@form.factory"]]
+            - [setContactRepository, ["@testlab.website.repository.contact"]]
 
     testlab.website.controller.index:
         class:  %testlab.website.controller.index.class%
@@ -20,7 +21,7 @@ services:
 
     testlab.website.repository.contact:
         class: Doctrine\ORM\EntityRepository
-        factory_service: doctrine.orm.entity_manager
+        factory_service: doctrine.orm.default_entity_manager
         factory_method: getRepository
         arguments:
             - TestLab\WebsiteBundle\Entity\Contact

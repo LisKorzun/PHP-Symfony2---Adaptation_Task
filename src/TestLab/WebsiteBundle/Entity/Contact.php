@@ -3,6 +3,7 @@
 namespace TestLab\WebsiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Contact
@@ -24,6 +25,15 @@ class Contact
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=50)
+     * @Assert\NotBlank(message = "Name is required")
+     * @Assert\Length(
+     *      min = 3,
+     *      max = 50
+     * )
+     * @Assert\Regex(
+     *     pattern="/^[a-zA-Z0-9_]+$/i",
+     *     message="Your name can contain numbers, letters and _"
+     * )
      */
     private $name;
 
@@ -31,6 +41,11 @@ class Contact
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=50)
+     * @Assert\NotBlank(message = "Email is required")
+     * @Assert\Email(
+     *     message = "The email '{{ value }}' is not a valid email.",
+     *     checkMX = true
+     * )
      */
     private $email;
 
@@ -38,6 +53,11 @@ class Contact
      * @var string
      *
      * @ORM\Column(name="subject", type="string", length=200)
+     * @Assert\NotBlank(message = "Subject is required")
+     * @Assert\Length(
+     *      min = 3,
+     *      max = 200
+     * )
      */
     private $subject;
 
@@ -45,6 +65,11 @@ class Contact
      * @var string
      *
      * @ORM\Column(name="body", type="text", length=1000)
+     * @Assert\NotBlank(message = "Body is required")
+     * @Assert\Length(
+     *      min = 3,
+     *      max = 1000
+     * )
      */
     private $body;
 

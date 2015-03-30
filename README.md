@@ -47,5 +47,6 @@ php app/console doctrine:migrations:status --show-versions
 
 php app/console doctrine:migrations:diff
 
+php app/console doctrine:migrations:migrate
 
 Screenshots  of the Pages:

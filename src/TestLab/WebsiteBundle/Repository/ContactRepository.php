@@ -4,7 +4,7 @@ namespace TestLab\WebsiteBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Mapping as ORM;
-use TestLab\WebsiteBundle\Entity\Contact  as Contact;
+use TestLab\WebsiteBundle\Entity\Contact as Contact;
 
 class ContactRepository extends EntityRepository
 {

@@ -7,6 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
 use TestLab\CommonBundle\Controller\AbstractController;
+use TestLab\WebsiteBundle\Entity\Contact;
 
 /**
  * @Route(service="testlab.website.controller.index")
@@ -19,15 +20,12 @@ class IndexController extends AbstractController
      */
     public function createAction(Request $request)
     {
-        $form = $this->createForm('website_contact');
+        $entity = new Contact();
+        $form = $this->createForm('website_contact', $entity);
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            $data = $form->getData();
-            $session = $request->getSession();
-            foreach($data as $key => $value){
-                $session->set($key, $value);
-            }
+            $this->getContactRepository()->save($entity);
             return $this->redirect('view');
         }
         return ['form' => $form->createView()];
