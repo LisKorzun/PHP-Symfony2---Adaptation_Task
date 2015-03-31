@@ -15,7 +15,7 @@ class ContactRepository extends EntityRepository
     public function findAllContactsOrderedByIdDesc()
     {
         return $this->getEntityManager()
-            ->createQuery('SELECT contact FROM TestLabBundle:Contact contact ORDER BY contact.id DESC ')
+            ->createQuery('SELECT contact FROM TestLabWebsiteBundle:Contact contact ORDER BY contact.id DESC ')
             ->getResult();
     }
 

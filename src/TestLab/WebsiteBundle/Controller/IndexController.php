@@ -35,10 +35,9 @@ class IndexController extends AbstractController
      * @Route("/view", name="test_lab_website_viewpage")
      * @Template
      */
-    public function viewAction(Request $request)
+    public function viewAction()
     {
-        $session = $request->getSession();
-        $data = $session->all();
+        $data = $this->getContactRepository()->findAllContactsOrderedByIdDesc();
         return ['data' => $data];
     }
 }

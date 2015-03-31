@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new TestLab\CommonBundle\TestLabCommonBundle(),
             new TestLab\WebsiteBundle\TestLabWebsiteBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

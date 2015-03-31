@@ -49,4 +49,6 @@ php app/console doctrine:migrations:diff
 
 php app/console doctrine:migrations:migrate
 
+composer require knplabs/knp-paginator-bundle
+
 Screenshots  of the Pages:
