@@ -67,7 +67,7 @@ abstract class AbstractController
      * Get contactRepository
      * @return ContactRepository
      */
-    public function getContactRepository()
+    protected function getContactRepository()
     {
         return $this->contactRepository;
     }
