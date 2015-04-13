@@ -1,4 +1,4 @@
-THE DEFINITION OF USER's LOCATION
+Test Task for IT-LAB of EC of HTP
 =================================
 
 
