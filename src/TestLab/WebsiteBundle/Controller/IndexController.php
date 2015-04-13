@@ -8,12 +8,27 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
 use TestLab\CommonBundle\Controller\AbstractController;
 use TestLab\WebsiteBundle\Entity\Contact;
+use TestLab\WebsiteBundle\Repository\ContactRepository;
 
 /**
  * @Route(service="testlab.website.controller.index")
  */
 class IndexController extends AbstractController
 {
+    /**
+     * @var ContactRepository
+     */
+    private $contactRepository;
+
+    /**
+     * Set contactRepository
+     * @param ContactRepository $contactRepository
+     */
+    public function setContactRepository(ContactRepository $contactRepository)
+    {
+        $this->contactRepository = $contactRepository;
+    }
+
     /**
      * @Route("/", name="test_lab_website_createpage")
      * @Template
@@ -25,7 +40,7 @@ class IndexController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            $this->getContactRepository()->save($entity);
+            $this->contactRepository->save($entity);
             return $this->redirect('view');
         }
         return ['form' => $form->createView()];
@@ -37,7 +52,7 @@ class IndexController extends AbstractController
      */
     public function viewAction()
     {
-        $data = $this->getContactRepository()->findAllContactsOrderedByIdDesc();
+        $data = $this->contactRepository->findAllContactsOrderedByIdDesc();
         return ['data' => $data];
     }
 }

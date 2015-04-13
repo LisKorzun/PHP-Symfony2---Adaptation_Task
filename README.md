@@ -1,5 +1,6 @@
-Test Task for IT-LAB
-========================
+THE DEFINITION OF USER's LOCATION
+=================================
+
 
 Branches:
 
@@ -48,6 +49,8 @@ php app/console doctrine:migrations:status --show-versions
 php app/console doctrine:migrations:diff
 
 php app/console doctrine:migrations:migrate
+
+php app/console cache:clear -e prod
 
 composer require knplabs/knp-paginator-bundle
 

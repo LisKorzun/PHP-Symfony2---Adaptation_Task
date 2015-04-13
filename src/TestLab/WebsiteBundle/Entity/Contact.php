@@ -73,7 +73,6 @@ class Contact
      */
     private $body;
 
-
     /**
      * Get id
      *
